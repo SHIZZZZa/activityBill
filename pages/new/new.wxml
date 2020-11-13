@@ -1,0 +1,35 @@
+
+<!--pages/new/new.wxml-->
+<view class="top-bgimage">
+  <view class="container">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title">标题</view>
+  <input type="text" bindinput="inputtitle" placeholder="标题" />
+</view>
+<view class="section">
+  <view class="section__title">分类</view>
+  <input type="text" bindinput="inputsort" placeholder="分类" />
+</view>
+<view class="section">
+  <view class="section__title">日期</view>
+<picker mode="date" value="{{date}}" start="2000-09-01" end="2050-09-01" bindchange="bindDateChange" >
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <view class="section__title">原因</view>
+  <input type="text" bindinput="inputreason" placeholder="原因" />
+</view>
+<view class="section">
+  <view class="section__title">输入金额</view>
+  <input type="text" bindinput="inputmoney" placeholder="输入金额" />
+</view>
+  <button  type="warn" bindtap="onAdd">保存账单</button>
